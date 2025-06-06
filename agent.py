@@ -10,7 +10,7 @@ class GeminiAgent:
     """Autonomous agent that plans and executes terminal commands."""
 
     def __init__(self, model: str = "gemini-2.0-flash", workspace: str = "."):
-        api_key = os.getenv("GEMINI") or os.getenv("GEMINI_API_KEY")
+        api_key = os.getenv("GEMINI")
         if not api_key:
             raise RuntimeError("GEMINI environment variable not set")
 
